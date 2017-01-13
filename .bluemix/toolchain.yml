@@ -1,0 +1,146 @@
+---
+#default_locale: en 
+#locales: 
+#  $ref: locales.yml
+name: "WebService project toolchain"
+description: "This is an OTC template for WebService project profile. \n\nTo get started, click **Create**."
+version: 0.1
+# Generate base64 representation of image at http://www.askapache.com/online-tools/base64-image-converter/
+image: data:image/png;base64,$file(PL_WebApp_OTCT-toolchain.png,base64)
+required: 
+ - jira
+ - gitlab
+ - jenkins
+ - artifactory
+ - sonarqube
+ - new_relic
+ - bluemix
+ - jmeter
+ - urbancodedeploy
+
+jira:
+  service_id: customtool
+  parameters:
+    type: Jira
+    lifecyclePhase: "THINK"
+    imageUrl: https://a.slack-edge.com/ae7f/plugins/jira/assets/service_512.png
+    documentationUrl:
+    name: "{{name}}"
+    dashboard_url:
+    description:
+    additional-properties:
+  
+gitlab:
+  service_id: customtool
+  parameters:
+    type: GitLab
+    lifecyclePhase: "CODE"
+    imageUrl: https://about.gitlab.com/images/new_logo/A.jpg
+    documentationUrl:
+    name: "{{name}}"
+    dashboard_url:
+    description:
+    additional-properties:
+    
+#Web IDE
+webide:
+  service_id: orion
+
+#Slack
+messaging:
+  service_id: slack
+  include: slack.yml
+  
+#Sauce Labs
+test:
+  service_id: saucelabs
+  include: saucelabs.yml
+  
+#Deployment Risk Analytics
+dra:
+  service_id: draservicebroker
+  include: dra.yml
+    
+jenkins:
+  service_id: customtool
+  parameters:
+    type: Jenkins
+    lifecyclePhase: "DELIVER"
+    imageUrl: https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png?version=1&modificationDate=1302753947000
+    documentationUrl:
+    name: "{{name}}"
+    dashboard_url:
+    description:
+    additional-properties:
+  
+artifactory:
+  service_id: customtool
+  parameters:
+    type: Artifactory
+    lifecyclePhase: "DELIVER"
+    imageUrl: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0xXNyDi1lKDC_ohLgf_ZP_uC-O1cLkYC-Oyb52H1BSr8HoJD9
+    documentationUrl:
+    name: "{{name}}"
+    dashboard_url:
+    description:
+    additional-properties:
+
+sonarqube:
+  service_id: customtool
+  parameters:
+    type: Sonarqube
+    lifecyclePhase: "DELIVER"
+    imageUrl: http://cdn.devslice.net/blog/wp-content/uploads/2016/08/SonarQube-logo.png
+    documentationUrl:
+    name: "{{name}}"
+    dashboard_url:
+    description:
+    additional-properties:
+    
+new_relic:
+  service_id: customtool
+  parameters:
+    type: NewRelic
+    lifecyclePhase: "MANAGE"
+    imageUrl: https://pbs.twimg.com/profile_images/777980658421424128/P-Tcwmlq.jpg
+    documentationUrl:
+    name: "{{name}}"
+    dashboard_url:
+    description:
+    additional-properties:
+
+bluemix:
+  service_id: customtool
+  parameters:
+    type: Bluemix
+    lifecyclePhase: "RUN"
+    imageUrl: https://developer.ibm.com/bluemix/wp-content/uploads/sites/20/2015/04/bluemix-logo.png
+    documentationUrl:
+    name: "{{name}}"
+    dashboard_url:
+    description:
+    additional-properties:
+
+jmeter:
+  service_id: customtool
+  parameters:
+    type: JMeter
+    lifecyclePhase: "CODE"
+    imageUrl: http://cdn.freeperformancesoftware.com/wp-content/uploads/2013/10/jmeter-logo.jpg
+    documentationUrl:
+    name: "{{name}}"
+    dashboard_url:
+    description:
+    additional-properties:
+    
+urbancodedeploy:
+  service_id: customtool
+  parameters:
+    type: Bluemix
+    lifecyclePhase: "DELIVER"
+    imageUrl: http://www.testplant.com/wp-content/uploads/2016/02/TP-Eco-logos-UrbanCode1.png
+    documentationUrl:
+    name: "{{name}}"
+    dashboard_url:
+    description:
+    additional-properties:
