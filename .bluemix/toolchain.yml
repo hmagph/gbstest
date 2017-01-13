@@ -8,15 +8,15 @@ version: 0.1
 # Generate base64 representation of image at http://www.askapache.com/online-tools/base64-image-converter/
 image: data:image/png;base64,$file(PL_WebApp_OTCT-toolchain.png,base64)
 required: 
- - jira
- - gitlab
- - jenkins
- - artifactory
- - sonarqube
- - new_relic
- - bluemix
- - jmeter
- - urbancodedeploy
+ #- jira
+ #- gitlab
+ #- jenkins
+ #- artifactory
+ #- sonarqube
+ #- new_relic
+ #- bluemix
+ #- jmeter
+ #- urbancodedeploy
 
 jira:
   service_id: customtool
